@@ -4,7 +4,7 @@ metadata:
   name: sample-spring-boot-on-kubernetes
 build:
   artifacts:
-  - image: piomin/sample-spring-boot-on-kubernetes
+  - image: nadeem536/sprint-boot-app:latest
     jib:
       args:
       - -Pjib
@@ -23,7 +23,7 @@ profiles:
 - name: buildpacks
   build:
     artifacts:
-      - image: piomin/sample-spring-boot-on-kubernetes
+      - image: nadeem536/sprint-boot-app:latest
         buildpacks:
           builder: paketobuildpacks/builder:base
 #          builder: gcr.io/buildpacks/builder:v1
